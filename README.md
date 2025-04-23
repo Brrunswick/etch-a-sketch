@@ -1,1 +1,1 @@
-# etch-a-sketch
+a quick task for the odin project - refreshing my memory on JS
