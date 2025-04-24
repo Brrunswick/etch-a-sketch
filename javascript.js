@@ -33,7 +33,7 @@ button.addEventListener("click", () => {
     //resets the text within the input box
     input.value = ""
 
-    if (isNaN(gridSize) || gridSize > 100 || gridSize < 0) {
+    if (isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
         alert("Please select a number between 1 & 100")
     }
     else {
