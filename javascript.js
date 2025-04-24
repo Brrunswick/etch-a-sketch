@@ -17,7 +17,7 @@ function createGrid(num) {
                 square.classList.add("hoverSquare");
                       setTimeout(() => {
                 square.classList.remove("hoverSquare");
-              }, 3000);
+              }, 6000);
             })
         }
     }
@@ -32,12 +32,18 @@ button.addEventListener("click", () => {
     let gridSize = input.value
     //resets the text within the input box
     input.value = ""
-    //deletes the old grid - referencing the parent as the rows and squares are only defined within the createGrid function and cannot be referenced here
-    while (container.firstChild) {
+
+    if (isNaN(gridSize) || gridSize > 100 || gridSize < 0) {
+        alert("Please select a number between 1 & 100")
+    }
+    else {
+        //deletes the old grid - referencing the parent as the rows and squares are only defined within the createGrid function and cannot be referenced here
+        while (container.firstChild) {
         container.removeChild(container.firstChild);
-      }
-    //runs the create grid function
-    createGrid(gridSize)
+        }
+        //runs the create grid function
+        createGrid(gridSize)
+    }
 })
 
 
